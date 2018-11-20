@@ -55,13 +55,13 @@ config.log.level = 'info';
  * Header price tickers, Currency switcher
  */
 // Exchange rates support (true - enabled, false - disabled)
-config.exchangeRates.enabled = true;
+config.exchangeRates.enabled = false;
 // Interval in ms for checking exchange rates (default: 30 seconds)
 config.exchangeRates.updateInterval = 30000;
 
 // Configuration for different currency pairs, set false to disable pair
 // LSK/BTC pair, supported: poloniex
-config.exchangeRates.exchanges.RISE.BTC = 'rightbtc';
+config.exchangeRates.exchanges['2BN'].BTC = 'rightbtc';
 // BTC/USD pair, supported: bitfinex, bitstamp, btce
 config.exchangeRates.exchanges.BTC.USD = 'bitfinex';
 // BTC/EUR pair, supported: bitstamp, bitmarket

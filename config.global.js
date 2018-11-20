@@ -14,14 +14,14 @@
  *
  */
 const config = {};
-config.blockTime = 27;
+config.blockTime = 15;
 config.lisk = {};
 config.freegeoip = {};
 config.redis = {};
 config.log = {};
 config.exchangeRates = {
 	exchanges: {
-		RISE: {},
+		"2BN": {},
 		BTC: {},
 	},
 };

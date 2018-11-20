@@ -94,7 +94,7 @@ const AddressConstructor = function ($rootScope, $stateParams, $location, $http,
 		vm.txs.loadData();
 	};
 
-	const isValidAddress = id => /([0-9]+)R$/.test(id);
+	const isValidAddress = id => /^[a-zA-Z0-9]{32,33}BB(T|N)$/.test(id);
 
 	$rootScope.$on('advanced-searchbox:modelUpdated', (event, model) => {
 		const params = {};
