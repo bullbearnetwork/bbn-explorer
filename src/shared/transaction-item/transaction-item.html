@@ -33,8 +33,8 @@
 	<span data-ng-if="tx.senderId === address">{{tx | txSender}}</span>
 </td>
 <td data-title="Recipient">
-	<a data-ng-if="tx.type == 0 && tx.recipientId !== address" data-account-href="tx" data-type="recipient">{{tx | txRecipient | middleEllipsis:10}}</a>
-	<span data-ng-if="tx.type == 0 && tx.recipientId === address">{{tx | txRecipient | middleEllipsis:10}}</span>
+	<a data-ng-if="tx.type == 0 && tx.recipientId !== address" data-account-href="tx" data-type="recipient">{{tx | txRecipient}}</a>
+	<span data-ng-if="tx.type == 0 && tx.recipientId === address">{{tx | txRecipient}}</span>
 	<span data-ng-if="tx.type >= 1">{{tx | txType}}</span>
 </td>
 <td data-title="Amount" class="amount text-right">

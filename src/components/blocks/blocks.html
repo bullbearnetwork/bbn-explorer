@@ -53,7 +53,7 @@
                             <td class="text-right hidden-xs hidden-sm"><span class="ellipsis">{{b.timestamp | timestamp}}</span></td>
                             <td class="right-padding-s text-right">{{b.transactionsCount}}</td>
                             <td class="right-padding-xs right-padding-s text-right">
-                                <a class="hidden-xs" href="/address/{{b.generator}}">{{b.delegate.username || b.generator}}</a>
+                                <a class="hidden-xs" href="/address/{{b.generator}}">{{b.delegate.username || b.generator | middleEllipsis:20}}</a>
                                 <a class="visible-xs" href="/address/{{b.generator}}">{{b.delegate.username || b.generator | middleEllipsis:10}}</a>
                             </td>
                             <td class="text-right hidden-xs">{{b.totalAmount | currency:$root.currency:$root.decimalPlaces}} {{$root.currency.symbol}}</td>
