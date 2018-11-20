@@ -34,12 +34,12 @@ const HeaderConstructor = function ($rootScope) {
 			$rootScope.currency.tickers = res.tickers;
 		}
 
-		// When ticker for user-stored currency is not available - switch to RISE temporarily
-		if ($rootScope.currency.symbol !== 'RISE' &&
+		// When ticker for user-stored currency is not available - switch to BBN temporarily
+		if ($rootScope.currency.symbol !== 'BBN' &&
 			(!$rootScope.currency.tickers ||
-			!$rootScope.currency.tickers.RISE ||
-			!$rootScope.currency.tickers.RISE[$rootScope.currency.symbol])) {
-			$rootScope.currency.symbol = 'RISE';
+			!$rootScope.currency.tickers.BBN ||
+			!$rootScope.currency.tickers.BBN[$rootScope.currency.symbol])) {
+			$rootScope.currency.symbol = 'BBN';
 		}
 	};
 

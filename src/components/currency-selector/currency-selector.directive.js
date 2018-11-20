@@ -19,7 +19,7 @@ import template from './currency-selector.html';
 AppCurrency.directive('currencySelector', ($rootScope, $timeout) => {
 	const CurrencySelectorLink = () => {
 		$timeout(() => {
-			$rootScope.currency.symbol = (localStorage && localStorage.getItem('lisk_explorer-currency')) || 'RISE';
+			$rootScope.currency.symbol = (localStorage && localStorage.getItem('lisk_explorer-currency')) || 'BBN';
 		});
 	};
 
@@ -35,7 +35,7 @@ AppCurrency.directive('currencySelector', ($rootScope, $timeout) => {
 			}
 		};
 
-		$scope.$watch('currency.tickers.RISE',
+		$scope.$watch('currency.tickers.BBN',
 			(tickers) => {
 				const getTickers = list => list.filter(code => tickers[code])
 					.map((code) => { // eslint-disable-line arrow-body-style

@@ -21,9 +21,9 @@ AppFilters.filter('currency', (numberFilter, liskFilter, fiatFilter, isFiat) => 
 	let factor = 1;
 	let equivalent = false;
 
-	if (currency.tickers && currency.tickers.RISE && currency.tickers.RISE[currency.symbol]) {
-		factor = currency.tickers.RISE[currency.symbol];
-	} else if (currency.symbol !== 'RISE') {
+	if (currency.tickers && currency.tickers.BBN && currency.tickers.BBN[currency.symbol]) {
+		factor = currency.tickers.BBN[currency.symbol];
+	} else if (currency.symbol !== 'BBN') {
 		// Exchange rate not available for current symbol
 		return 'N/A';
 	}
@@ -41,7 +41,7 @@ AppFilters.filter('currency', (numberFilter, liskFilter, fiatFilter, isFiat) => 
 		return factor === 1 ? amount : `~${amount}`;
 	}
 
-	if (currency.symbol === 'RISE') {
+	if (currency.symbol === 'BBN') {
 		equivalent = Number(amount) === Number(numberFilter((amount * factor), decimalPlacesCrypto));
 	}
 
