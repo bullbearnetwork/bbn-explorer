@@ -19,7 +19,7 @@ import AppFilters from './filters.module';
  * @todo check the possibility of removing hard coded hashes
  */
 AppFilters.filter('nethash', () => (nethash) => {
-	if (nethash === 'e90d39ac200c495b97deb6d9700745177c7fc4aa80a404108ec820cbeced054c') {
+	if (nethash === '42cea9d13097437aedb1b0fdd587e18c6e51c8761d144bb36316a1c5ae646efd') {
 		return 'Testnet';
 	} else if (nethash === 'cd8171332c012514864edd8eb6f68fc3ea6cb2afbaf21c56e12751022684cea5') {
 		return 'Mainnet';
