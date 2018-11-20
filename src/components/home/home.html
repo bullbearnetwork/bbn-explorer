@@ -46,21 +46,21 @@
 							<td class="left-padding-xs left-padding-s left-padding-m left-padding-l double" colspan="6">Waiting for transactions...</td>
 						</tr>
 						<tr data-ng-repeat='tx in vm.txs track by $index'>
-							<td class="left-padding-xs left-padding-s left-padding-m left-padding-l double hidden-xs"><a class="ellipsis" href="/tx/{{tx.id}}">{{tx.id}}</a></td>
+							<td class="left-padding-xs left-padding-s left-padding-m left-padding-l double hidden-xs"><a class="ellipsis" href="/tx/{{tx.id}}">{{tx.id | middleEllipsis:10}}</a></td>
 							<td class="text-right hidden-xs hidden-sm hidden-md"><span class="ellipsis">{{tx.timestamp | timestamp}}<span></td>
 							<td class="left-padding-xs">
 								<a class="ellipsis" data-account-href="tx" data-type="sender">
-									<span class="pull-right hidden-xs">{{tx | txSender}}</span>
+									<span class="pull-right hidden-xs">{{tx | txSender | middleEllipsis:10}}</span>
 									<span class="pull-left visible-xs">{{tx | txSender | middleEllipsis:10}}</span>
 								</a>
 							</td>
 							<td class="left-padding-xs">
 								<a class="ellipsis" data-ng-show="tx.type == 0" data-account-href="tx" data-type="recipient">
-									<span class="pull-right hidden-xs">{{tx | txRecipient}}</span>
+									<span class="pull-right hidden-xs">{{tx | txRecipient | middleEllipsis:10}}</span>
 									<span class="pull-left visible-xs">{{tx | txRecipient | middleEllipsis:10}}</span>
 								</a>
 								<span class="ellipsis" data-ng-show="tx.type >= 1">
-									<span class="pull-right hidden-xs">{{tx | txRecipient}}</span>
+									<span class="pull-right hidden-xs">{{tx | txRecipient | middleEllipsis:10}}</span>
 									<span class="pull-left visible-xs">{{tx | txRecipient | middleEllipsis:12}}</span>
 								</span>
 							</td>
@@ -102,7 +102,7 @@
 							<td class="left-padding-xs left-padding-s left-padding-m left-padding-l double" colspan="7">Waiting for blocks...</td>
 						</tr>
 						<tr data-ng-repeat='b in vm.blocks track by $index'>
-							<td class="left-padding-s left-padding-m left-padding-l double hidden-xs"><a class="ellipsis" href="/block/{{b.id}}">{{b.id}}</a></td>
+							<td class="left-padding-s left-padding-m left-padding-l double hidden-xs"><a class="ellipsis" href="/block/{{b.id}}">{{b.id | middleEllipsis:10}}</a></td>
 							<td class="left-padding-xs">
 								<span class="ellipsis text-right hidden-xs">{{b.height}}</span>
 								<a class="ellipsis pull-left visible-xs" href="/block/{{b.id}}">{{b.height}}</a>
